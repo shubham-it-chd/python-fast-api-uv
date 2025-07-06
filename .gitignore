@@ -257,6 +257,14 @@ logs/
 .env.test
 .env.production
 
+# SSL Certificates (development)
+certs/
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
 # UV specific
 # Note: uv.lock should be committed to version control
 # .uv/ is the UV cache directory
