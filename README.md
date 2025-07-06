@@ -119,13 +119,25 @@ uv sync
 ```
 
 #### 8. Run the Application
+
+**Development Mode:**
+```bash
+uv run fastapi dev
+```
+
+**Alternative Development Commands:**
 ```bash
 uv run python main.py
 ```
 
-Or alternatively:
+Or:
 ```bash
 uv run uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+**Production Mode:**
+```bash
+uv run uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 ### Quick Start (If Repository Already Exists)
@@ -143,8 +155,20 @@ If you're cloning an existing repository:
    ```
 
 3. **Run the application**:
+
+   **Development Mode:**
+   ```bash
+   uv run fastapi dev
+   ```
+
+   **Alternative Development Commands:**
    ```bash
    uv run python main.py
+   ```
+
+   **Production Mode:**
+   ```bash
+   uv run uvicorn main:app --host 0.0.0.0 --port 8000
    ```
 
 ## Usage Examples
