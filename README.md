@@ -57,9 +57,86 @@ A modern FastAPI application built with the UV package manager, featuring a comp
 - Python 3.11 or higher
 - UV package manager
 
-### Installation Steps
+### Complete Installation Guide
 
-1. **Clone the repository** (if applicable)
+#### 1. Install Python
+First, ensure you have Python 3.11 or higher installed on your system.
+
+**Windows:**
+- Download from [python.org](https://www.python.org/downloads/)
+- Or use winget: `winget install Python.Python.3.11`
+
+**macOS:**
+- Download from [python.org](https://www.python.org/downloads/)
+- Or use Homebrew: `brew install python@3.11`
+
+**Linux (Ubuntu/Debian):**
+```bash
+sudo apt update
+sudo apt install python3.11 python3.11-venv python3.11-pip
+```
+
+**Linux (CentOS/RHEL/Fedora):**
+```bash
+sudo dnf install python3.11 python3.11-pip
+```
+
+Verify installation:
+```bash
+python --version
+# or
+python3 --version
+```
+
+#### 2. Install Uvicorn
+```bash
+pip install uvicorn
+```
+
+#### 3. Install UV Package Manager
+```bash
+pip install uv
+```
+
+#### 4. Create Project Directory
+```bash
+mkdir python-fast-api-uv && cd python-fast-api-uv
+```
+
+#### 5. Initialize UV Project
+```bash
+uv init
+```
+
+#### 6. Add FastAPI with Standard Extras
+```bash
+uv add fastapi --extra standard
+```
+
+#### 7. Install Dependencies
+```bash
+uv sync
+```
+
+#### 8. Run the Application
+```bash
+uv run python main.py
+```
+
+Or alternatively:
+```bash
+uv run uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### Quick Start (If Repository Already Exists)
+If you're cloning an existing repository:
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd python-fast-api-uv
+   ```
+
 2. **Install dependencies**:
    ```bash
    uv sync
@@ -68,11 +145,6 @@ A modern FastAPI application built with the UV package manager, featuring a comp
 3. **Run the application**:
    ```bash
    uv run python main.py
-   ```
-
-   Or alternatively:
-   ```bash
-   uv run uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
 
 ## Usage Examples
